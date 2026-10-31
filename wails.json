@@ -1,0 +1,10 @@
+{
+  "name": "Verification Desk",
+  "outputfilename": "Verification-Desk",
+  "info": {
+    "companyName": "Independent Demo",
+    "productName": "Verification Desk",
+    "productVersion": "0.1.0",
+    "comments": "Offline synthetic verification demo"
+  }
+}

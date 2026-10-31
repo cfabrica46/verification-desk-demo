@@ -1,0 +1,15 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+/dist/
+/build/bin/
+/frontend/dist/
+/frontend/node_modules/
+/tmp/
+*.log
+*.exe
+*.app/
+*.zip
+.idea/
+.vscode/

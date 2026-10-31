@@ -1,0 +1,119 @@
+.code-card[hidden] {
+    display: none;
+}
+
+.code-card {
+    margin-top: 24px;
+    background: #fff;
+    border: 1px solid #c9e5f3;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.code-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e8f0f5;
+}
+
+.code-card-icon {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    background: #e3f5ee;
+    color: #08784a;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.code-card-header h3 {
+    font-size: 15px;
+    margin: 0 0 4px;
+}
+
+.code-card-header p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+}
+
+.code-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 16px;
+    background: #f2f9fd;
+}
+
+.code-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    color: var(--accent-dark);
+}
+
+.code-value {
+    margin: 16px 0 22px;
+    color: var(--accent);
+    font-size: 43px;
+    font-weight: 750;
+    letter-spacing: 8px;
+    font-variant-numeric: tabular-nums;
+    user-select: text;
+}
+
+.copy-code-button {
+    background: var(--accent);
+    color: #fff;
+    border: 0;
+    border-radius: 9px;
+    padding: 13px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 160px;
+}
+
+.copy-code-button:hover:not(:disabled) {
+    background: var(--accent-dark);
+}
+
+.copy-code-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.copy-status {
+    font-size: 12px;
+    color: #08784a;
+    min-height: 16px;
+    margin: 10px 0 0;
+}
+
+.code-notice {
+    padding: 14px 20px;
+    margin: 0;
+    text-align: center;
+    color: #657c8c;
+    background: #f9fbfd;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.code-card[data-demo="true"] .code-display {
+    background: #f5f8fb;
+}
+
+.code-card[data-demo="true"] .code-label {
+    color: #83651a;
+}
+
+@media (max-width: 600px) {
+    .code-value {
+        font-size: 34px;
+        letter-spacing: 5px;
+    }
+}

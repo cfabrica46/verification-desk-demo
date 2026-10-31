@@ -1,0 +1,92 @@
+.feedback[hidden] {
+    display: none;
+}
+
+.feedback {
+    transition: background 0.2s ease;
+}
+
+.feedback[data-state="success"] {
+    background: #edf9f3;
+    border-color: #b7e5cb;
+}
+
+.feedback[data-state="success"] .demo-tag,
+.feedback[data-state="success"] .result-check {
+    color: #08784a;
+}
+
+.feedback[data-state="error"] {
+    background: #fff4f4;
+    border-color: #f2c4c4;
+}
+
+.feedback[data-state="error"] .demo-tag,
+.feedback[data-state="error"] .result-check {
+    color: #bc3030;
+}
+
+.feedback[data-state="loading"] {
+    background: #eef8fe;
+    border-color: #b9dff2;
+}
+
+.feedback[data-state="loading"] .demo-tag,
+.feedback[data-state="loading"] .result-check {
+    color: #0075bc;
+}
+
+.feedback[data-state="loading"] .result-check {
+    display: inline-block;
+    animation: feedback-spin 1s linear infinite;
+}
+
+.feedback[data-state="empty"] {
+    background: #f5f8fb;
+    border-color: #dce8f0;
+}
+
+@keyframes feedback-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feedback {
+        transition: none;
+    }
+
+    .feedback[data-state="loading"] .result-check {
+        animation: none;
+    }
+}
+
+.feedback-actions[hidden] {
+    display: none;
+}
+
+.feedback-actions {
+    display: flex;
+    margin-top: 16px;
+}
+
+.feedback-retry {
+    padding: 11px 18px;
+    border: 1px solid #b9d7e8;
+    border-radius: 8px;
+    background: white;
+    color: #00558a;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.feedback-retry:hover:not(:disabled) {
+    background: #eaf6fc;
+}
+
+.feedback-retry:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
